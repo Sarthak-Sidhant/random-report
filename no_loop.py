@@ -61,19 +61,19 @@ print(gen_username)
 print(gen_email)
 print(gen_reason)
 
-def send_keys():
-    # sending the url to the form
-    url = web.find_element("xpath",'//*[@id="url"]')
-    url.send_keys(gen_url)
 
-    username = web.find_element("xpath",'//*[@id="reportedBy"]')
-    username.send_keys(gen_username)
+# sending the url to the form
+url = web.find_element("xpath",'//*[@id="url"]')
+url.send_keys(gen_url)
 
-    email = web.find_element("xpath",'//*[@id="email"]')
-    email.send_keys(gen_email)
+username = web.find_element("xpath",'//*[@id="reportedBy"]')
+username.send_keys(gen_username)
 
-    reason = web.find_element("xpath",'//*[@id="reason"]')
-    reason.send_keys(gen_reason)
-    
-    submit = web.find_element("xpath",'/html/body/div/div[1]/div[1]/div[3]/button')
-    submit.click()
+email = web.find_element("xpath",'//*[@id="email"]')
+email.send_keys(gen_email)
+
+reason = web.find_element("xpath",'//*[@id="reason"]')
+reason.send_keys(gen_reason)
+
+submit = web.find_element("xpath",'/html/body/div/div[1]/div[1]/div[3]/button')
+submit.click()
